@@ -22,17 +22,17 @@ The main purpose of this application is to create a simple REST API applying bes
 
 # REST API.
 
-The REST API app is described below
+The REST API app is described below:
 
 ## Get the Hello World
 ### Request
-`[GET] /`
+`[GET] http://localhost:{env.PORT}/`
 ### Response
     Hello World
 
 ## Get the posts list
 ### Request
-`[GET] /posts`
+`[GET] http://localhost:{env.PORT}/posts`
 ### Response
     [
         {
@@ -51,7 +51,7 @@ The REST API app is described below
 
 ## Get a single post
 ### Request
-`[GET] /posts/:id`
+`[GET] http://localhost:{env.PORT}/posts/:id`
 ### Response
     {
         "userId": 10,
@@ -62,7 +62,7 @@ The REST API app is described below
 
 ## Create a new post
 ### Request
-`[POST] /posts`
+`[POST] http://localhost:{env.PORT}/posts`
 
     {
         "userId": 10,
@@ -80,7 +80,7 @@ Note: `userId` is required to create a new post.
 
 ## Edit a post
 ### Request
-`[PUT] /posts/:id`
+`[PUT] http://localhost:{env.PORT}/posts/:id`
     {
         "title": "New Title",
         "body": "New example"
@@ -95,7 +95,7 @@ Note: `userId` is required to create a new post.
 
 ## Delete a post
 ### Request
-`[DELETE] /posts/:id`
+`[DELETE] http://localhost:{env.PORT}/posts/:id`
 ### Response
     {
         "message": "Post with id: 1 has been deleted"
@@ -106,6 +106,7 @@ Note: `userId` is required to create a new post.
     * Node js.
     * Express js.
     * module-alias.
+    * dotenv (App Configurations)
 
 - For Testing.
     * Mocha.
